@@ -17,7 +17,7 @@ Performs cross-sectional analysis of abnormal returns:
 - Analyzes Cumulative Average Abnormal Returns (CAAR)
 - Tests significance across multiple event windows
 
-4. Parametric T-test (parametric_t_test.R)
+3. Parametric T-test (parametric_t_test.R)
 Implements standard parametric tests for event study analysis:
 - Calculates individual event statistics with proper degrees of freedom
 - Performs both AR (single day) and CAR (multiple day) tests
