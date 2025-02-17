@@ -7,48 +7,42 @@ This repository contains a collection of R scripts for conducting event study an
 1. Corrado Rank Test (corrado_rank_test.R)
 Implements the non-parametric Corrado Rank Test methodology:
 
-Calculates abnormal returns using a four-factor market model
-Performs rank testing across multiple event windows
-Generates daily statistics and cumulative average abnormal returns (CAAR)
+- Calculates abnormal returns using a four-factor market model
+- Performs rank testing across multiple event windows
+- Generates daily statistics and cumulative average abnormal returns (CAAR)
 
 2. Cross-sectional Test (cross_sectional_test.R)
 Performs cross-sectional analysis of abnormal returns:
+- Computes daily Average Abnormal Returns (AAR) with t-statistics
+- Analyzes Cumulative Average Abnormal Returns (CAAR)
+- Tests significance across multiple event windows
 
-Computes daily Average Abnormal Returns (AAR) with t-statistics
-Analyzes Cumulative Average Abnormal Returns (CAAR)
-Tests significance across multiple event windows
-
-3. Parametric T-test (parametric_t_test.R)
+4. Parametric T-test (parametric_t_test.R)
 Implements standard parametric tests for event study analysis:
-
-Calculates individual event statistics with proper degrees of freedom
-Performs both AR (single day) and CAR (multiple day) tests
-Accounts for estimation window variance in test statistics
+- Calculates individual event statistics with proper degrees of freedom
+- Performs both AR (single day) and CAR (multiple day) tests
+- Accounts for estimation window variance in test statistics
 
 4. Permutation Test (permutation_test.R)
 Conducts permutation-based statistical tests:
-
-Implements permutation testing with 10,000 random permutations
-Calculates test statistics for single-day AR and multi-day CAR
-Computes empirical p-values based on permutation distributions
+- Implements permutation testing with 10,000 random permutations
+- Calculates test statistics for single-day AR and multi-day CAR
+- Computes empirical p-values based on permutation distributions
 
 ### Dataset
 The analysis requires a dataset (dataset.csv) with the following structure:
-
-Event identifiers and company information
-Market and stock return data
-Event window specifications
-Exchange rate information
+- Event identifiers and company information
+- Market and stock return data
+- Event window specifications
+- Exchange rate information
 
 Key variables include:
-
-Event_ID, Company_name, Ticker
-Stock_return, Market_return, World_return
-Relative_trading_day
-FX_weighted_pct_change
+- Event_ID, Company_name, Ticker
+- Stock_return, Market_return, World_return
+- Relative_trading_day
+- FX_weighted_pct_change
 
 ### Usage
-
 Place your event study data in a file named dataset.csv in the root directory
 Run the desired test script(s)
 Results will be saved in the output directory, organized by test type
@@ -69,17 +63,15 @@ install.packages(c("dplyr", "tidyr", "writexl"))
 ### Output Format
 
 Each test generates:
-
-Individual test results for each event window
-Summary statistics with significance levels
-Combined results in CSV/Excel format
+- Individual test results for each event window
+- Summary statistics with significance levels
+- Combined results in CSV/Excel format
 
 Results include:
-
-Test statistics
-p-values
-Significance levels (*, **, ***)
-Sample sizes and window specifications
+- Test statistics
+- p-values
+- Significance levels (*, **, ***)
+- Sample sizes and window specifications
 
 ### Acknowledgments
 
