@@ -49,19 +49,17 @@ Results will be saved in the output directory, organized by test type
 
 Each script creates its own subdirectory in the output folder:
 
-output/
+```output/
 ├── rank/             # Corrado Rank Test results
 ├── cross_sectional/  # Cross-sectional Test results
 ├── parametric/       # Parametric T-test results
-└── permutation/      # Permutation Test results
-
+└── permutation/      # Permutation Test results```
+```
 ### Requirements
-
 Required R packages:
-install.packages(c("dplyr", "tidyr", "writexl"))
+```install.packages(c("dplyr", "tidyr", "writexl"))```
 
 ### Output Format
-
 Each test generates:
 - Individual test results for each event window
 - Summary statistics with significance levels
@@ -74,8 +72,7 @@ Results include:
 - Sample sizes and window specifications
 
 ### Acknowledgments
-
-Code cleaning and documentation was supported by Anthropic's Claude AI assistant
-Original analysis scripts were developed for academic research
-Implementation based on established event study methodology literature
+- Code cleaning and documentation was supported by Anthropic's Claude AI assistant
+- Original analysis scripts were developed for academic research
+- Implementation based on established event study methodology literature
 
